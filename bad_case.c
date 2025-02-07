@@ -9,7 +9,7 @@ int test1603(int x)
 		x++;
 		break;
 	default:
-	    ;
+        break; // Added break to terminate the default clause
 	}
 
 	return x;
