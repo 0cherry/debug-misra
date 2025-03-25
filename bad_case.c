@@ -10,15 +10,16 @@ int test1603(int x)
 		break;
 	case 3:	
 		x--;
+        break;
 	default:
-	    ;
+        break; // Adding break for compliance, maintaining execution result.
 	}
 
 	return x;
 }
 
 short test0902(int x, int y, short e){
-   short buf[ 3 ][ 2 ] = { 1, 2, 0, 0, 5, 6 }; // MISRA_C_2012_09_02
+    short buf[ 3 ][ 2 ] = { { 1, 2 }, { 0, 0 }, { 5, 6 } }; // Compliant with MISRA_C_2012_09_02
    buf[x][y] = e;
    return buf[x][y];
 }
